@@ -96,6 +96,15 @@ menu .item a:hover {
     text-align: end;
 }
 
+#menu_container {
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+
 @media screen and (max-width: 762px) {
     menu {
         position: fixed;
@@ -126,6 +135,10 @@ menu .item a:hover {
 
     #close_btn {
         display: inline;
+    }
+
+    #menu_container.active {
+        display: block;
     }
 
 }

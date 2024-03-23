@@ -13,6 +13,7 @@
     <nav>
         <div class="container">
             <div class="nav_flex">
+                <div id="menu_container"></div>
                 <div class="logo">
                     <span>Logo</span>
                 </div>
@@ -28,23 +29,27 @@
                     </div>
 
                 </menu>
-                <button id="open_btn"><i class="fa-solid fa-bars"></i></button>
+                <button id="open_btn"><i class="fa-solid fa-bars"></i></button
             </div>
         </div>
     </nav>
 
     <script>
         const menu = document.querySelector('#menu')
+        const menu_container = document.querySelector('#menu_container')
         const close_btn = document.querySelector('#close_btn')
         const open_btn = document.querySelector('#open_btn')
 
 
+
         const toggle_menu = () => {
             menu.classList.toggle('active')
+            menu_container.classList.toggle('active')
         }
 
         close_btn.addEventListener('click', toggle_menu)
         open_btn.addEventListener('click', toggle_menu)
+        menu_container.addEventListener('click', toggle_menu)
 
     </script>
 </body>
